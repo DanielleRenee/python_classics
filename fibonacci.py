@@ -1,3 +1,20 @@
+# warm up, print everything in a list, recursivly
+
+def print_list_recursively(lst):
+
+    if lst == []:
+        return
+
+    print lst.pop(0)
+    return print_list_recursively(lst)
+
+
+colors = ['blue', 'yellow', 'green', 'red']
+
+print_list_recursively(colors)
+
+
+
 # [1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610, 987, 1597, 2584, 4181]
 
 def fib(n):

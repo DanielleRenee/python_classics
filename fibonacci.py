@@ -11,7 +11,29 @@ def print_list_recursively(lst):
 
 colors = ['blue', 'yellow', 'green', 'red']
 
-print_list_recursively(colors)
+# print_list_recursively(colors)
+
+
+
+
+def flatten_list(lst):
+    """return a list, flattened"""
+    flat = []
+
+    for i in lst: 
+        if type(i) !=list:
+            flat.append(i)
+            
+        else:
+            flat.extend(flatten_list(i))
+
+    print flat
+    return flat
+                  
+
+colors = ['blue', ['yellow', 'green'], 'red', ['purple', 'rainbow', 'pink']]
+
+flatten_list(colors)
 
 
 
@@ -33,4 +55,4 @@ fibonacci = []
 for i in range(1, 20):
     fibonacci.append(fib(i))
 
-print fibonacci
+# print fibonacci
